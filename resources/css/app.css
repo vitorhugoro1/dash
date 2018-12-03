@@ -1,0 +1,44 @@
+@import "tailwindcss/preflight";
+
+/* Add custom base styles here... */
+
+@import "tailwindcss/components";
+
+/* Add custom components here... */
+
+@import "tailwindcss/utilities";
+
+@import url("https://use.fontawesome.com/releases/v5.5.0/css/all.css");
+
+/* Add custom utilities here... */
+a {
+    @apply no-underline;
+}
+
+.notification-pill {
+    @apply -mr-px -mt-2 absolute bg-orange-dark block font-bold p-1 pin-r pin-t rounded-full text-xs;
+}
+
+.notification-box {
+    @apply -ml-32 absolute bg-blue-darker border-white font-sans leading-tight mt-2 rounded-lg text-center text-grey-light w-64;
+}
+
+.notification-title {
+    @apply border-b-2 border-white font-medium py-1 text-sm;
+}
+
+.notification-list-box {
+    @apply bg-grey-light px-1 rounded-b;
+}
+
+.notification-list-item {
+    @apply py-2;
+}
+
+.notification-link {
+    @apply block text-grey-darker text-xs;
+}
+
+.badge {
+    @apply uppercase font-medium p-1 rounded-lg;
+}

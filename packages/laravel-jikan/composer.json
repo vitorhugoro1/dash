@@ -1,0 +1,16 @@
+{
+    "name": "vitorhugoro1/laravel-jikan",
+    "type": "laravel, jikan-api",
+    "authors": [
+        {
+            "name": "Vitor Hugo",
+            "email": "vitorhugo.ro10@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "VitorHugo\\Jikan\\": "src"
+        }
+    }
+}

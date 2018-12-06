@@ -1,16 +1,24 @@
 {
     "name": "vitorhugoro1/laravel-jikan",
     "type": "laravel, jikan-api",
-    "authors": [
-        {
-            "name": "Vitor Hugo",
-            "email": "vitorhugo.ro10@gmail.com"
-        }
-    ],
-    "require": {},
+    "authors": [{
+        "name": "Vitor Hugo",
+        "email": "vitorhugo.ro10@gmail.com"
+    }],
+    "require": {
+        "jikan-me/jikan": "^2.3"
+    },
     "autoload": {
         "psr-4": {
-            "VitorHugo\\Jikan\\": "src"
+            "VitorHugo\\Jikan\\": "src/"
         }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "VitorHugo\\Jikan\\Tests\\": "tests/"
+        }
+    },
+    "require-dev": {
+        "orchestra/testbench": "^3.7"
     }
 }

@@ -2,6 +2,7 @@
 
 namespace App\Console\Commands;
 
+use App\Services\PopulateUserAnimes;
 use App\User;
 use Illuminate\Console\Command;
 use Jikan\Jikan;
@@ -47,10 +48,8 @@ class PopulateAnimeData extends Command
     {
         $users = app(User::class)->where('is_active', true)->get();
 
-        $users->each(function (User $user) {
-            $animes = $this->jikan->UserAnimeList($user->mal_username);
-
-            dd($animes);
+        $users->each(function ($user) {
+            app(PopulateUserAnimes::class)->__invoke($user);
         });
     }
 }

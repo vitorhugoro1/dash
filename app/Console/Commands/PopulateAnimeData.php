@@ -50,8 +50,7 @@ class PopulateAnimeData extends Command
         $users->each(function (User $user) {
             $animes = $this->jikan->UserAnimeList($user->mal_username);
 
-
-            dd();
+            dd($animes);
         });
     }
 }

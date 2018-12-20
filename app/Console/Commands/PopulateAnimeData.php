@@ -5,7 +5,6 @@ namespace App\Console\Commands;
 use App\Services\PopulateUserAnimes;
 use App\User;
 use Illuminate\Console\Command;
-use Jikan\Jikan;
 
 class PopulateAnimeData extends Command
 {
@@ -24,18 +23,12 @@ class PopulateAnimeData extends Command
     protected $description = 'Get active users and get you informations from MAL';
 
     /**
-     * @var Jikan
-     */
-    private $jikan;
-
-    /**
      * Create a new command instance.
      *
      * @return void
      */
     public function __construct()
     {
-        $this->jikan = new Jikan();
         parent::__construct();
     }
 

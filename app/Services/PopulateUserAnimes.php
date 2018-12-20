@@ -50,7 +50,7 @@ class PopulateUserAnimes
 
             if ($hasNewEpisodes->count() < $maped->count()) {
                 $maped = $maped->whereNotIn('episode_id', $hasNewEpisodes->pluck('episode_id')->toArray());
-                $saved->episodes()->createMany($maped);
+                $saved->episodes()->createMany($maped->toArray());
             }
         }
     }

@@ -14,4 +14,9 @@ class Episodes extends Model
     {
         return $this->belongsTo(Animes::class, 'anime_id', 'anime_id');
     }
+
+    public function data()
+    {
+        return $this->hasMany(EpisodeData::class, 'episode_id');
+    }
 }

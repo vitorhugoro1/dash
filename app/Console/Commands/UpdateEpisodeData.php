@@ -4,7 +4,8 @@ namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
 use App\Animes;
-use App\Services\AnimesProject;
+use App\Services\AnimeData\AnimesProject;
+use App\Services\AnimeData\AnimesTelecine;
 
 class UpdateEpisodeData extends Command
 {
@@ -20,21 +21,20 @@ class UpdateEpisodeData extends Command
      *
      * @var string
      */
-    protected $description = 'Command description';
+    protected $description = 'Get all episode data from all active data source';
 
     /**
-     * Active Anime Database Services
+     * Active Anime Database Services.
      *
      * @var array
      */
     private $services = [
-        AnimesProject::class
+        AnimesProject::class,
+        AnimesTelecine::class,
     ];
 
     /**
      * Create a new command instance.
-     *
-     * @return void
      */
     public function __construct()
     {
